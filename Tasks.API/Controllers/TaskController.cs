@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Tasks.Application.UseCases.Tasks.Delete;
 using Tasks.Application.UseCases.Tasks.GetID;
 using Tasks.Application.UseCases.Tasks.Insert;
 using Tasks.Application.UseCases.Tasks.Update;
@@ -63,8 +64,8 @@ public class TaskController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorJSON), StatusCodes.Status400BadRequest)]
     public IActionResult Delete(int id)
     {
-        var response = new GetIDTasksUseCase().Execute(id);
+        var response = new GetDeleteTasksUseCase().Execute(id);
 
-        return Ok(response);
+        return Ok();
     }
 }
