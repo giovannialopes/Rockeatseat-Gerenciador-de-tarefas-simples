@@ -24,7 +24,7 @@ public class TaskController : ControllerBase
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResponseInsertTaskJSON), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ResponseInsertTaskJSON), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJSON), StatusCodes.Status400BadRequest)]
     public IActionResult GetAll()
     {
