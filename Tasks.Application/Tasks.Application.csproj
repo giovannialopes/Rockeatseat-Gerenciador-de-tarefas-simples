@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Tasks\" />
+    <Folder Include="UseCases\Tasks\Delete\" />
+    <Folder Include="UseCases\Tasks\GetID\" />
+    <Folder Include="UseCases\Tasks\GetALL\" />
+    <Folder Include="UseCases\Tasks\Update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks.Communication\Tasks.Communication.csproj" />
   </ItemGroup>
 
 </Project>
