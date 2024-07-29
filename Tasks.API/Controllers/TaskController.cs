@@ -46,14 +46,24 @@ public class TaskController : ControllerBase
         return Ok(response);
     }
 
-
     [HttpPut]
     [Route("{id}")]
     [ProducesResponseType(typeof(ResponseInsertTaskJSON), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorJSON), StatusCodes.Status400BadRequest)]
-    public IActionResult Update([FromQuery]int id, [FromBody] RequestTaskJSON request)
+    public IActionResult Update(int id, [FromBody] RequestTaskJSON request)
     {
         var response = new UpdateTasksUseCase().Execute(id, request);
+
+        return Ok(response);
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    [ProducesResponseType(typeof(ResponseInsertTaskJSON), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseErrorJSON), StatusCodes.Status400BadRequest)]
+    public IActionResult Delete(int id)
+    {
+        var response = new GetIDTasksUseCase().Execute(id);
 
         return Ok(response);
     }

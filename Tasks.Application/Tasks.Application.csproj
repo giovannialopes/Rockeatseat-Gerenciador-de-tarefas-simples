@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Tasks\Delete\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Tasks.Communication\Tasks.Communication.csproj" />
   </ItemGroup>
 
